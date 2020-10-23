@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../dataService.service';
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  listSpeakers: any;
+  rootPage: any;
+
+  constructor(private dataService: DataService) {
+    this.dataService.getSpeakers().subscribe(res => {
+      this.listSpeakers = Object.values(res);
+    });
+  }
 
 }
