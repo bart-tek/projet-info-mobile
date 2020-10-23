@@ -1,3 +1,25 @@
-<p>
-  tab2-session works!
-</p>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Session
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="tab2-sessioncontent">
+    <h1>
+      {{session.title}}
+    </h1>
+    <p>
+      {{session.description}}
+    </p>
+    <ion-list>
+      <ion-item *ngFor="let speaker of speakers">
+        <ion-label>
+          {{speaker.name}}
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
