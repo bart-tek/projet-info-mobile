@@ -15,7 +15,4 @@ export class Tab2Page {
       this.listSessions = Object.values(res);
     });
   }
-
-  
-
 }
