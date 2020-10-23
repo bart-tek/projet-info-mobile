@@ -1,0 +1,41 @@
+.tab1-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .img-logo {
+        width: 35vw;
+        height: auto;
+        margin: 4% 0% 2% 0%;
+    }
+
+    .tab1-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2% 0% 2% 0%;
+
+        .tab1-title {
+            font-size: 32px;
+        }
+    
+        .tab1-date {
+            font-size: 16px;
+            font-style: italic;
+        }
+    }
+
+    .tab1-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2% 0% 2% 0%;
+
+        .tab1-navbutton {
+            margin-bottom: 5%;
+            width: 25vw;
+        }
+    }
+}
+
