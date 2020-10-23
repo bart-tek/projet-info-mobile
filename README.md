@@ -1,16 +1,18 @@
 # projet-info-mobile
-👨‍💻👨‍💻👨‍💻 Groupe : Barthélémy TEK - Robin CARREZ - Axel COUDRAY
-📅 Date de rendu : Vendredi 23 Octobre
+👨‍💻👨‍💻👨‍💻 __Groupe : Barthélémy TEK - Robin CARREZ - Axel COUDRAY__<br/>
+📅 __Date de rendu : Vendredi 23 Octobre__
 
 _Projet créé en utilisant Ionic, Angular ainsi que capacitor._
 
 ## Lancement
-Pour run le projet il suffit de :
---> se mettre à la racine du répertoire, de lancer `npm install`.
+Pour run le projet il suffit de :<br/>
+--> se mettre à la racine du répertoire, de lancer `npm install`.<br/>
 --> lancer le projet avec `node_modules/.bin/ionic serve` pour avoir la vue web.
 
-Pour le build sur portable (android) :
---> à la racine du projet faire `npx cap add android`.
+
+Pour le build sur portable (android) :<br/>
+--> à la racine du projet faire `node_modules/.bin/ionic build`.<br/>
+--> à la racine du projet faire `npx cap add android`.<br/>
 --> `npx cap open android`.
 
 ## Reste à faire

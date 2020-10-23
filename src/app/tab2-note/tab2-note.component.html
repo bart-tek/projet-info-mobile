@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title slot="center">
+      Mes notes
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="tab2-notecontent">
+    <h1>
+      {{sessionTitle}}
+    </h1>
+    <ion-label>Notes</ion-label>
+    <div class="note-textarea">
+      <ion-item>
+        <ion-textarea rows="20" maxlength="500" [(ngModel)]="textArea"></ion-textarea>
+      </ion-item>
+    </div>
+    <div class="note-savebutton">
+      <ion-button (click)="saveNote()">Enregistrer</ion-button>
+    </div>
+  </div>
+</ion-content>
