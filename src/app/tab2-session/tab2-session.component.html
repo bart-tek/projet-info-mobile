@@ -1,8 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-title slot="center">
       Session
     </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -20,7 +23,7 @@
       <ion-item class="tab2-session-speaker" *ngFor="let speaker of currentSpeakers"
         routerLink="/tabs/speaker"
         [queryParams]="{speaker:speaker | json }"
-        color="transparent"
+        color="light"
         >
         <ion-img class="tab2-session-speakerimg" src="https://devfest2018.gdgnantes.com/{{speaker.photoUrl}}"></ion-img>
         <ion-label>
@@ -28,5 +31,13 @@
         </ion-label>
       </ion-item>
     </ion-list>
+    <ion-button
+        routerLink="/tabs/notes"
+        [queryParams]="{session:session | json }"
+        color="light"
+        class="tab2-sessionbutton"
+      >
+        Mes notes
+      </ion-button>
   </div>
 </ion-content>

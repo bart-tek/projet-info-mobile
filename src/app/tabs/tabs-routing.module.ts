@@ -28,6 +28,10 @@ const routes: Routes = [
         loadChildren: () => import('../tab3-speaker/tab3-speaker.module').then(m => m.Tab3SpeakerModule)
       },
       {
+        path: 'notes',
+        loadChildren: () => import('../tab2-note/tab2-note.module').then(m => m.Tab2NoteModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

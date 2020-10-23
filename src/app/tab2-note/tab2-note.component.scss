@@ -1,0 +1,21 @@
+.tab2-notecontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    .note-textarea{
+        width: 75%;
+        height: 60%;
+        border: 1;
+        border-style: solid;
+    }
+
+    .note-savebutton{
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
