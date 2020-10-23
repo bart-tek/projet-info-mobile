@@ -11,6 +11,7 @@ Pour run le projet il suffit de :<br/>
 
 
 Pour le build sur portable (android) :<br/>
+--> à la racine du projet faire `node_modules/.bin/ionic build`.<br/>
 --> à la racine du projet faire `npx cap add android`.<br/>
 --> `npx cap open android`.
 
