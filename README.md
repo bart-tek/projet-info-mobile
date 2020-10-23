@@ -1,6 +1,8 @@
 # projet-info-mobile
-👨‍💻👨‍💻👨‍💻 Groupe : Barthélémy TEK - Robin CARREZ - Axel COUDRAY
-📅 Date de rendu : Vendredi 23 Octobre
+👨‍💻👨‍💻👨‍💻 __Groupe : Barthélémy TEK - Robin CARREZ - Axel COUDRAY__
+
+
+📅 __Date de rendu : Vendredi 23 Octobre__
 
 _Projet créé en utilisant Ionic, Angular ainsi que capacitor._
 
