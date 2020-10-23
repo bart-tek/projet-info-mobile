@@ -42,8 +42,6 @@ export class Tab2SessionComponent implements OnInit {
     } else {
       this.currentSpeakers = [];
     }
-    
-
   }
 
 }
