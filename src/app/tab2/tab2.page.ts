@@ -12,8 +12,7 @@ export class Tab2Page {
 
   constructor(private dataService: DataService) {
     this.dataService.getSessions().subscribe(res => {
-      console.log(res);
-      this.listSessions = res;
+      this.listSessions = Object.values(res);
     });
   }
 
