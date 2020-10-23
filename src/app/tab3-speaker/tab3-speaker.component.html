@@ -5,31 +5,32 @@
       </ion-title>
     </ion-toolbar>
   </ion-header>
-  
-<ion-content [fullscreen]="true">
-    <div class="tab3-speakercontent">
-      <div class="tab3-speaker-head">
-        <h1>{{speaker.name}}</h1>  
-        <ion-img class="img-speaker" src="{{speaker.photoUrl}}"></ion-img>
-      </div>
-      <div class="tab3-speaker-bio">
-        <h2>Biographie</h2>  
-        <p>{{speaker.bio}}</p> 
-      </div>
-      <div class="tab3-speaker-presentation">
-        <h2>Ses présentations</h2>  
-        <ion-list>
-          <ion-item *ngFor="let session of speakerSessions">
-            <ion-label 
-              routerLink="/tabs/session"
-              [queryParams]="{session:session | json }"
-              color="transparent"
-              class="tab3-sessionbutton"
-            >
-              {{session.title}}
-            </ion-label>
-          </ion-item>
-        </ion-list>
-      </div>
+
+<ion-content>
+  <div class="tab3-speakercontent">
+    <div class="tab3-speaker-head">
+      <h1>{{speaker.name}}</h1>  
+      <ion-img class="img-speaker" src="{{speaker.photoUrl}}"></ion-img>
     </div>
+    <div class="tab3-speaker-bio">
+      <h2>Biographie</h2>  
+      <p>{{speaker.bio}}</p> 
+    </div>
+    <div class="tab3-speaker-presentation">
+      <h2>Ses présentations</h2>  
+      <ion-list>
+        <ion-item *ngFor="let session of speakerSessions">
+          <ion-label 
+            routerLink="/tabs/session"
+            [queryParams]="{session:session | json }"
+            color="transparent"
+            class="tab3-sessionbutton"
+          >
+            {{session.title}}
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
 </ion-content>
+
