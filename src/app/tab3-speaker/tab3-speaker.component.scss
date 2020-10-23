@@ -5,10 +5,35 @@
     align-items: center;
     height: 100%;
 
-    .img-speaker {
-        width: 35vw;
-        height: auto;
-        margin: 4% 0% 2% 0%;
+    .tab3-speaker-head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .img-speaker {
+            width: 15vw;
+            height: auto;
+            margin: 4% 0% 2% 0%;
+        }
+    }
+
+    .tab3-speaker-bio {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 60%;
+
+        p {
+            text-align: justify;
+        }
+    }
+
+    .tab3-speaker-presentation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 60%;
     }
 }
-
