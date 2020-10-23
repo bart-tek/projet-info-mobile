@@ -1,5 +1,6 @@
 # projet-info-mobile
-Groupe : Barthélémy TEK - Robin CARREZ - Axel COUDRAY
+👨‍💻👨‍💻👨‍💻 Groupe : Barthélémy TEK - Robin CARREZ - Axel COUDRAY
+📅 Date de rendu : Vendredi 23 Octobre
 
 _Projet créé en utilisant Ionic, Angular ainsi que capacitor._
 
@@ -11,8 +12,6 @@ Pour run le projet il suffit de :
 Pour le build sur portable (android) :
 --> à la racine du projet faire `npx cap add android`.
 --> `npx cap open android`.
---> `node_modules/.bin/ionic capacitor build android`.
---> `node_modules/.bin/ionic capacitor run android`.
 
 ## Reste à faire
 1. Rendre le site responsive
@@ -20,3 +19,14 @@ Pour le build sur portable (android) :
 3. Ajouter la page d'informations des caractéristiques du téléphone
 4. Ajouter l'ajout au contact
 5. Ajouter l'agenda DevFest
+
+## Mis en place
+1. Page d'accueil
+2. Vue sessions
+3. Vue présentateurs
+4. Affichage d'une session
+5. Affichage d'un présentateur
+6. Navigation entre sessions et présentateurs
+7. Sauvegarde des données dans le storage
+8. Prise de note sur une session
+9. Run sur android fonctionnel
