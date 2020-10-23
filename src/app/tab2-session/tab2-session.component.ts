@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Data } from '@angular/router';
+import { ActivatedRoute, Data } from '@angular/router';
 import { DataService } from '../dataService.service';
 
 @Component({
@@ -8,18 +8,21 @@ import { DataService } from '../dataService.service';
   styleUrls: ['./tab2-session.component.css']
 })
 export class Tab2SessionComponent implements OnInit {
-  @Input() session: any;
+  session: any;
   speakers: any;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private _route: ActivatedRoute) {
     this.dataService.getSpeakers().subscribe(res => {
       this.speakers = Object.values(res);
     });
-    this.filterSpeakersById(this.session.speakers);
-    console.log(this.speakers);
   }
 
   ngOnInit() {
+    this._route.queryParams.subscribe(params => {
+      this.session = JSON.parse(params['session']);
+      this.filterSpeakersById(this.session.speakers);
+      console.log(this.speakers);
+    });
   }
 
   filterSpeakersById(ids) {

@@ -10,12 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { Tab2SessionComponent } from './tab2-session/tab2-session.component';
 
 @NgModule({
-  declarations: [	AppComponent,
-      Tab2SessionComponent
-   ],
+  declarations: [	AppComponent ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [
