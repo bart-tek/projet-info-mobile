@@ -1,0 +1,40 @@
+.tab2-sessioncontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    .tab2-session-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+
+        p {
+            text-align: justify;
+        }
+    }
+
+    .tab2-session-speakers {
+        width: 80%;
+        height: 35vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .tab2-session-speaker {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+    
+            .tab2-session-speakerimg {
+                width: 15vw;
+                margin-right: 5vw;
+            }
+        }
+    }
+}

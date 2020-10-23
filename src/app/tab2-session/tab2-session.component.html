@@ -8,14 +8,16 @@
 
 <ion-content [fullscreen]="true">
   <div class="tab2-sessioncontent">
-    <h1>
-      {{session.title}}
-    </h1>
-    <p>
-      {{session.description}}
-    </p>
-    <ion-list>
-      <ion-item *ngFor="let speaker of currentSpeakers">
+    <div class="tab2-session-text">
+      <h1>
+        {{session.title}}
+      </h1>
+      <p>
+        {{session.description}}
+      </p>
+    </div>
+    <ion-list class="tab2-session-speakers">
+      <ion-item class="tab2-session-speaker" *ngFor="let speaker of currentSpeakers">
         <ion-img class="tab2-session-speakerimg" src="https://devfest2018.gdgnantes.com/{{speaker.photoUrl}}"></ion-img>
         <ion-label>
           {{speaker.name}}

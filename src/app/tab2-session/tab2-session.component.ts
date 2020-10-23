@@ -5,7 +5,7 @@ import { DataService } from '../dataService.service';
 @Component({
   selector: 'app-tab2-session',
   templateUrl: './tab2-session.component.html',
-  styleUrls: ['./tab2-session.component.css']
+  styleUrls: ['./tab2-session.component.scss']
 })
 export class Tab2SessionComponent implements OnInit {
   session: any;
@@ -15,7 +15,6 @@ export class Tab2SessionComponent implements OnInit {
   constructor(private dataService: DataService, private _route: ActivatedRoute) {
     this._route.queryParams.subscribe(params => {
       this.session = JSON.parse(params['session']);
-      console.log(this.session);
       if (this.speakers && this.session) {
         this.loadSpeakers();
       }
