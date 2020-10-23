@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Data } from '@angular/router';
+import { DataService } from '../dataService.service';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  listSessions: any;
 
-  constructor() {}
+  constructor(private dataService: DataService) {
+    this.dataService.getSessions().subscribe(res => {
+      console.log(res);
+      this.listSessions = res;
+    });
+  }
+
+  
 
 }
