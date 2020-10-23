@@ -1,9 +1,11 @@
 .tab3-speakerbutton {
+  width: 100%;
+
+  .tab3-speakerbutton-content {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
-    justify-items: start;
-    color:black
+    align-items: center;
+  }
 }

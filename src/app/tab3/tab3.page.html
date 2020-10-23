@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Présentateurs
-    </ion-title>
+    <ion-title> Présentateurs </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,11 +16,13 @@
       <ion-button
         routerLink="/tabs/speaker"
         [queryParams]="{speaker:speaker | json }"
-        color="transparent"
+        color="light"
         class="tab3-speakerbutton"
       >
-        {{speaker.name}}
-        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        <div class="tab3-speakerbutton-content">
+          <span>{{speaker.name}}</span>
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </div>
       </ion-button>
 
       <!--<ion-button expand="full" fill="outline" onclick="">
