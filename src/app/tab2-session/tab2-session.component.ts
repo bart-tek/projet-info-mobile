@@ -15,8 +15,9 @@ export class Tab2SessionComponent implements OnInit {
   constructor(private dataService: DataService, private _route: ActivatedRoute) {
     this._route.queryParams.subscribe(params => {
       this.session = JSON.parse(params['session']);
+      console.log(this.session);
       if (this.speakers && this.session) {
-        this.filterSpeakersById(this.session.speakers);
+        this.loadSpeakers();
       }
     }, err => {
       console.log(err);
@@ -24,12 +25,20 @@ export class Tab2SessionComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loadSpeakers();
+  }
+
+  loadSpeakers() {
     this.dataService.getSpeakers().subscribe(res => {
       this.speakers = Object.values(res);
     }, err => {
       console.log(err);
     }, () => {
-      this.filterSpeakersById(this.session.speakers);
+      if (this.session.speakers) {
+        this.filterSpeakersById(this.session.speakers);
+      } else {
+        this.currentSpeakers = [];
+      }
     });
   }
 
@@ -37,11 +46,8 @@ export class Tab2SessionComponent implements OnInit {
     let ids = sessionSpeakers.map(function(value, key) {
       return value;
     });
-    if (ids.length >= 1) {
-      this.currentSpeakers = this.speakers.filter(speaker => ids.includes(parseInt(speaker.id)));
-    } else {
-      this.currentSpeakers = [];
-    }
+
+    this.currentSpeakers = this.speakers.filter(speaker => ids.includes(parseInt(speaker.id)));
   }
 
 }
