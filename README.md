@@ -16,11 +16,10 @@ Pour le build sur portable (android) :<br/>
 --> `npx cap open android`.
 
 ## Reste à faire
-1. Rendre le site responsive
-2. Ajouter la prise de photos
-3. Ajouter la page d'informations des caractéristiques du téléphone
-4. Ajouter l'ajout au contact
-5. Ajouter l'agenda DevFest
+1. Ajouter la prise de photos
+2. Ajouter la page d'informations des caractéristiques du téléphone
+3. Ajouter l'ajout au contact
+4. Ajouter l'agenda DevFest
 
 ## Mis en place
 1. Page d'accueil
