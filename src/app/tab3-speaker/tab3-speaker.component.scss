@@ -1,0 +1,14 @@
+.tab3-speakercontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    .img-speaker {
+        width: 35vw;
+        height: auto;
+        margin: 4% 0% 2% 0%;
+    }
+}
+

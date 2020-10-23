@@ -15,7 +15,12 @@
 
   <ion-list>
     <ion-item *ngFor="let speaker of listSpeakers">
-      <ion-button color="transparent" class="tab3-speakerbutton">
+      <ion-button
+        routerLink="/tabs/speaker"
+        [queryParams]="{speaker:speaker | json }"
+        color="transparent"
+        class="tab3-speakerbutton"
+      >
         {{speaker.name}}
         <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
       </ion-button>

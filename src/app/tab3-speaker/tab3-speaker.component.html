@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        Speaker
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-content [fullscreen]="true">
+    <div class="tab3-speakercontent">
+      <p></p>
+      <ion-label>{{speaker.name}}</ion-label>  
+      <ion-img class="img-speaker" src="{{speaker.photoUrl}}"></ion-img>
+      <ion-label>Biographie</ion-label>  
+      <p>{{speaker.bio}}</p> 
+      <ion-label>Ses présentations</ion-label>  
+      <ion-list>
+        <ion-item *ngFor="let session of speakerSessions">
+          <ion-label>
+            {{session.title}}
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+</ion-content>
