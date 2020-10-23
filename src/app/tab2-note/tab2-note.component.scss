@@ -3,13 +3,19 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
+    margin-bottom: 12%;
+
+    h1 {
+        width: 75%;
+        margin-bottom: 5%;
+        text-align: center;
+    }
 
     .note-textarea{
         width: 75%;
-        height: 60%;
         border: 1;
         border-style: solid;
+        margin: 2%;
     }
 
     .note-savebutton{

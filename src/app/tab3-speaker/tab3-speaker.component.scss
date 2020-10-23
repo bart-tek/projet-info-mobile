@@ -21,8 +21,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items: flex-start;
-        width: 60%;
+        align-items: center;
+        margin: 10%;
 
         p {
             text-align: justify;
@@ -33,11 +33,61 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items: flex-start;
-        width: 60%;
+        align-items: center;
+        margin: 10%;
 
         .tab3-sessionbutton {
             cursor: pointer;
         }
     }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .tab3-speakercontent {
+
+        .tab3-speaker-head {
+
+            .img-speaker {
+                width: 55vw;
+            }
+        }
+    }
+}
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen 
+  and (min-width: 600px)
+  and (max-width: 899px) {
+
+    .tab3-speakercontent {
+
+        .tab3-speaker-head {
+
+            .img-speaker {
+                width: 55vw;
+            }
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 900px and up) */
+@media only screen 
+  and (min-width: 900px)
+  and (max-width: 1199px) {
+
+    .tab3-speakercontent {
+
+        .tab3-speaker-head {
+
+            .img-speaker {
+                width: 55vw;
+            }
+        }
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }
