@@ -16,6 +16,7 @@
     </p>
     <ion-list>
       <ion-item *ngFor="let speaker of currentSpeakers">
+        <ion-img class="tab2-session-speakerimg" src="https://devfest2018.gdgnantes.com/{{speaker.photoUrl}}"></ion-img>
         <ion-label>
           {{speaker.name}}
         </ion-label>
