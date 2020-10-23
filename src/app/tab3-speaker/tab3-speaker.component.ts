@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DataService } from '../dataService.service';
+import { StorageService } from '../storage.service';
 
 const IMG_LINK = "https://devfest2018.gdgnantes.com/"
 
@@ -15,7 +15,7 @@ export class Tab3SpeakerComponent implements OnInit {
   allSessions: any;
   speakerSessions: any;
 
-  constructor(private dataService: DataService, private _route: ActivatedRoute) {
+  constructor(private storageService: StorageService, private _route: ActivatedRoute) {
     this._route.queryParams.subscribe(params => {
       this.speaker = JSON.parse(params['speaker']);
       this.speaker.photoUrl = IMG_LINK + this.speaker.photoUrl;
@@ -37,11 +37,8 @@ export class Tab3SpeakerComponent implements OnInit {
   }
 
   loadSessions() {
-    this.dataService.getSessions().subscribe(res => {
-      this.allSessions = Object.values(res);
-    }, err => {
-      console.log(err);
-    }, () => {
+    this.storageService.getObject("sessions").then(data => {
+      this.allSessions = Object.values(data);
       this.speakerSessions = this.filterSessionsBySpeaker(this.speaker.id);
     });
   }

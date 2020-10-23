@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from '../dataService.service';
+import { StorageService } from '../storage.service';
 
 @Component({
   selector: 'app-tab3',
@@ -11,9 +11,9 @@ export class Tab3Page {
   listSpeakers: any;
   rootPage: any;
 
-  constructor(private dataService: DataService) {
-    this.dataService.getSpeakers().subscribe(res => {
-      this.listSpeakers = Object.values(res);
+  constructor(private storageService: StorageService) {
+    this.storageService.getObject("speakers").then(data => {
+      this.listSpeakers = Object.values(data);
     });
   }
 

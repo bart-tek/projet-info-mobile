@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Data } from '@angular/router';
-import { DataService } from '../dataService.service';
+import { StorageService } from '../storage.service';
 
 @Component({
   selector: 'app-tab2-session',
@@ -12,7 +12,7 @@ export class Tab2SessionComponent implements OnInit {
   speakers: any;
   currentSpeakers: any;
 
-  constructor(private dataService: DataService, private _route: ActivatedRoute) {
+  constructor(private storageService: StorageService, private _route: ActivatedRoute) {
     this._route.queryParams.subscribe(params => {
       this.session = JSON.parse(params['session']);
       if (this.speakers && this.session) {
@@ -28,11 +28,9 @@ export class Tab2SessionComponent implements OnInit {
   }
 
   loadSpeakers() {
-    this.dataService.getSpeakers().subscribe(res => {
-      this.speakers = Object.values(res);
-    }, err => {
-      console.log(err);
-    }, () => {
+
+    this.storageService.getObject("speakers").then(data => {
+      this.speakers = Object.values(data);
       if (this.session.speakers) {
         this.filterSpeakersById(this.session.speakers);
       } else {

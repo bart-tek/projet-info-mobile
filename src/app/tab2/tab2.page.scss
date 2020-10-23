@@ -1,3 +1,11 @@
 .tab2-sessionbutton {
+  width: 100%;
+
+  .tab2-sessionbutton-content {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

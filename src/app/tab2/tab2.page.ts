@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../dataService.service';
 import { Router } from '@angular/router';
+import { StorageService } from '../storage.service';
 
 @Component({
   selector: 'app-tab2',
@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 export class Tab2Page {
   listSessions: any;
 
-  constructor(private dataService: DataService, private router: Router) {
-    this.dataService.getSessions().subscribe(res => {
-      this.listSessions = Object.values(res);
+  constructor(private storageService: StorageService, private router: Router) {
+    this.storageService.getObject("sessions").then(data => {
+      this.listSessions = Object.values(data);
     });
   }
 }
