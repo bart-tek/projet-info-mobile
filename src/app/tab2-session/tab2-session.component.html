@@ -17,7 +17,11 @@
       </p>
     </div>
     <ion-list class="tab2-session-speakers">
-      <ion-item class="tab2-session-speaker" *ngFor="let speaker of currentSpeakers">
+      <ion-item class="tab2-session-speaker" *ngFor="let speaker of currentSpeakers"
+        routerLink="/tabs/speaker"
+        [queryParams]="{speaker:speaker | json }"
+        color="transparent"
+        >
         <ion-img class="tab2-session-speakerimg" src="https://devfest2018.gdgnantes.com/{{speaker.photoUrl}}"></ion-img>
         <ion-label>
           {{speaker.name}}

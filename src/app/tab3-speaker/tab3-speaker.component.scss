@@ -35,5 +35,9 @@
         justify-content: space-around;
         align-items: flex-start;
         width: 60%;
+
+        .tab3-sessionbutton {
+            cursor: pointer;
+        }
     }
 }

@@ -20,7 +20,12 @@
         <h2>Ses présentations</h2>  
         <ion-list>
           <ion-item *ngFor="let session of speakerSessions">
-            <ion-label>
+            <ion-label 
+              routerLink="/tabs/session"
+              [queryParams]="{session:session | json }"
+              color="transparent"
+              class="tab3-sessionbutton"
+            >
               {{session.title}}
             </ion-label>
           </ion-item>
